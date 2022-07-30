@@ -1,2 +1,2 @@
-# Quiz-App Live Ckeck
+# Quiz-App 
 https://kushalpareek.github.io/Quiz-App/
