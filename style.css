@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat&family=Open+Sans:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600 !important;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+
+:root {
+    --bgGradientColor: linear-gradient(to right bottom, #25CCF7, #65dbed);
+    --radioButtonColor: #25CCF7;
+    --btnColor: #25CCF7;
+    --btnHoverColor: #09b8fd;
+    --glassEffectColor: linear-gradient(to right bottom, rgba(225, 225, 225, 0.8), rgba(225, 225, 225, 0.3));
+    --blurEffect: 1.5rem;
+}
+
+html {
+    font-size: 62.5%;
+    /* overflow: hidden; */
+}
+
+.main-div {
+    background: var(--bgGradientColor);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .1rem;
+    padding-bottom: 2rem;
+    border-bottom: .3rem solid #fff;
+    border-radius: 50%;
+}
+
+.logo::first-letter {
+    color: #0652DD;
+    font-size: 3.5rem;
+}
+
+.glass-div {
+    background: #fff;
+    width: 60%;
+    background: var(--glassEffectColor);
+    backdrop-filter: blur(var(--blurEffect));
+    border-radius: 2rem;
+    border: .3rem solid rgba(225, 225, 225, 0.8);
+    padding: 3rem 8rem;
+    z-index: 2;
+
+    /* box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, .2); */
+}
+
+.circle1,
+.circle2 {
+    background: #fff;
+    background: linear-gradient(to right bottom, rgba(225, 225, 225, 1), rgba(225, 225, 225, 0.5));
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    left: 15%;
+    bottom: 5%;
+}
+
+.glass-div h2 {
+    font-size: 3.2rem;
+    letter-spacing: .1rem;
+    margin: 1rem 0 4rem 0;
+    /* font-family: 'Libre Baskerville', serif; */
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.glass-div li {
+    font-size: 2rem;
+    font-weight: 500;
+    list-style: none;
+    margin-bottom: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type="radio"] {
+    margin-right: 1rem;
+}
+
+input[type='radio']:after {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+    top: -.2rem;
+    left: -.1rem;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: .2rem solid white;
+    cursor: pointer;
+}
+
+input[type='radio']:checked:after {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 1.8rem;
+    top: -.2rem;
+    left: -.1rem;
+    position: relative;
+    background-color: var(--radioButtonColor);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: .2rem solid white;
+}
+
+#submit,
+.btn {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    background: var(--btnColor);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#submit {
+    display: block;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+#submit:hover {
+    background: var(--btnHoverColor);
+    cursor: pointer;
+}
+
+#showScore {
+    background: linear-gradient(to right bottom, rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9));
+    border-radius: 1.5rem;
+    padding: 3rem 4rem;
+    margin-top: 3rem;
+    box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, .1);
+}
+
+#showScore h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#showScore button {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    background: #58b19fc2;
+}
+
+#showScore button:hover {
+    background: #58b19f;
+    cursor: pointer;
+}
+
+.scoreArea {
+    display: none;
+}
+
+
+/* for website responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .logo {
+        top: 2.5%;
+    }
+
+    .glass-div {
+        width: 90%;
+        padding: 3rem 5rem;
+
+    }
+
+    .glass-div h2 {
+        font-size: 2.4rem;
+        letter-spacing: .1rem;
+        margin: 1rem 0 4rem 0;
+        /* font-family: 'Libre Baskerville', serif; */
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .glass-div li {
+        font-size: 1.9rem;
+        font-weight: 500;
+        list-style: none;
+        margin-bottom: 2rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .circle1,
+    .circle2 {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .circle1 {
+        top: 2%;
+        right: 2%;
+    }
+
+    .circle2 {
+        left: 2%;
+        bottom: 2%;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .glass-div {
+        width: 80%;
+        padding: 3rem 5rem;
+    }
+
+    .glass-div h2 {
+        font-size: 2.4rem;
+    }
+
+
+}
