@@ -171,6 +171,6 @@ class calc:
 # Driver Code 
 root = Tk() 
 
-obj=calc(root) # object instantiated 
+obj=calc(root) # object instantiated
 
 root.mainloop() 
